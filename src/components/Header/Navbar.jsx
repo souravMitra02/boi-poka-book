@@ -1,13 +1,14 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const Navbar = () => {
 
     const links = <>
-        <li className='m-2'>Home</li>
-        <li className='m-2'>About</li>
+       <NavLink to='/'className={({ isActive }) => isActive ? "text-[#23BE0A] border-2 border-[#23BE0A] rounded font-bold px-2" : ""}> <li className='m-2 text-xl'>Home</li></NavLink>
+       <NavLink to='/about' className={({ isActive }) => isActive ? "text-[#23BE0A] border-2 border-[#23BE0A] rounded font-bold px-2" : ""}> <li className='m-2 text-xl'>About</li></NavLink>
         </>
     return (
-        <div className="navbar   mb-10">
+        <div className="navbar mb-5 md:mb-8 lg:mb-10">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
