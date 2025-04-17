@@ -7,7 +7,7 @@ const Navbar = () => {
         <li className='m-2'>About</li>
         </>
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar   mb-10">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -19,7 +19,7 @@ const Navbar = () => {
                         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <h2 className="text-xl md:text-2xl lg:text-2xl font-bold">Book Vibe</h2>
   </div>
   <div className="navbar-center hidden lg:flex ">
     <ul className="menu menu-horizontal px-1">

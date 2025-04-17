@@ -13,7 +13,8 @@ import Home from '../pages/Home/Home';
          errorElement: <ErrorPage></ErrorPage>,
          children: [
              {
-                 index: true,
+             index: true,
+               loader: ()=>fetch('../../public/data/booksData.json'),
                  path: "/",
                  Component: Home
           }
