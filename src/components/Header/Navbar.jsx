@@ -4,8 +4,9 @@ import { NavLink } from 'react-router';
 const Navbar = () => {
 
     const links = <>
-       <NavLink to='/'className={({ isActive }) => isActive ? "text-[#23BE0A] border-2 border-[#23BE0A] rounded font-bold px-2" : ""}> <li className='m-2 text-xl'>Home</li></NavLink>
-       <NavLink to='/about' className={({ isActive }) => isActive ? "text-[#23BE0A] border-2 border-[#23BE0A] rounded font-bold px-2" : ""}> <li className='m-2 text-xl'>About</li></NavLink>
+       <NavLink to='/'className={({ isActive }) => isActive ? "text-[#23BE0A] border-2 border-[#23BE0A] rounded font-semibold px-2" : ""}> <li className='m-2 text-xl'>Home</li></NavLink>
+       <NavLink to='/about' className={({ isActive }) => isActive ? "text-[#23BE0A] border-2 border-[#23BE0A] rounded font-semibold px-2" : ""}> <li className='m-2 text-xl'>About</li></NavLink>
+       <NavLink to='/readList' className={({ isActive }) => isActive ? "text-[#23BE0A] border-2 border-[#23BE0A] rounded font-semibold px-2" : ""}> <li className='m-2 text-xl'>Listed Books</li></NavLink>
         </>
     return (
         <div className="navbar mb-5 md:mb-8 lg:mb-10">
