@@ -4,9 +4,9 @@ import { NavLink } from 'react-router';
 const Navbar = () => {
 
     const links = <>
-       <NavLink to='/'className={({ isActive }) => isActive ? "text-[#23BE0A] border-2 border-[#23BE0A] rounded font-semibold px-2" : ""}> <li className='m-2 text-xl'>Home</li></NavLink>
-       <NavLink to='/about' className={({ isActive }) => isActive ? "text-[#23BE0A] border-2 border-[#23BE0A] rounded font-semibold px-2" : ""}> <li className='m-2 text-xl'>About</li></NavLink>
-       <NavLink to='/readList' className={({ isActive }) => isActive ? "text-[#23BE0A] border-2 border-[#23BE0A] rounded font-semibold px-2" : ""}> <li className='m-2 text-xl'>Listed Books</li></NavLink>
+       <NavLink to='/'className={({ isActive }) => isActive ? "text-[#23BE0A] border-1 border-[#23BE0A] rounded font-semibold px-2" : ""}> <li className='m-4 text-xl'>Home</li></NavLink>
+       <NavLink to='/readList' className={({ isActive }) => isActive ? "text-[#23BE0A] border-1 border-[#23BE0A] rounded font-semibold px-2" : ""}> <li className='m-4 text-xl'>Listed Books</li></NavLink>
+       <NavLink to='/read' className={({ isActive }) => isActive ? "text-[#23BE0A] border-1 border-[#23BE0A] rounded font-semibold px-2" : ""}> <li className='m-4 text-xl'>Pages to Read</li></NavLink>
         </>
     return (
         <div className="navbar mb-5 md:mb-8 lg:mb-10">
@@ -28,8 +28,9 @@ const Navbar = () => {
       {links}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
+  <div className="navbar-end gap-2">
+    <button className="btn bg-[#23BE0A] font-bold text-white">Sign In</button>
+    <button className="btn bg-[#59C6D2] font-bold text-white">Sign Up</button>
   </div>
 </div>
     );

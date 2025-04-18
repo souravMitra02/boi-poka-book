@@ -6,11 +6,13 @@ import Banner from '../../components/Banner/Banner';
 
 const Root = () => {
     return (
+        <>
         <div className='max-w-5xl mx-auto'>
             <Navbar></Navbar>
             <Outlet></Outlet>
-            <Footer></Footer>
         </div>
+            <Footer></Footer>
+            </>
     );
 };
 

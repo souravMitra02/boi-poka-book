@@ -1,6 +1,11 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
 import { addToStoreDB } from "../../utility/addToDB";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { ToastContainer } from "react-toastify";
+
+const MySwal = withReactContent(Swal)
 
 const BookDetails = () => {
   const { id } = useParams();
@@ -22,13 +27,34 @@ const BookDetails = () => {
     } = singleBook;
     
     const handleRead = (id) => {
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You are going to mark this item as read!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, mark as read!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Marked as Read!",
+                text: "The item is now in your read section.",
+                icon: "success"
+              });
+            }
+          });
+          
+
+
         addToStoreDB(id)
 }
 
 
 
   return (
-    <div className="hero  min-h-screen">
+    <div className="hero  min-h-screen lg:mb-20">
       <div className="flex flex-col lg:flex-row gap-10 ">
         <img
           src={image}
@@ -69,8 +95,11 @@ const BookDetails = () => {
             <h3>
               Rating: <span className="font-semibold">{rating}</span>
             </h3>
-            <div className="space-x-5 mt-4">
-              <button onClick={()=>handleRead(id)} className="btn">Read</button>
+            <div className="space-x-5 mt-4 flex">
+                          <div>
+                              <button onClick={() => handleRead(id)} className="btn">Read</button>
+                              <ToastContainer></ToastContainer>
+             </div>
               <button className="btn bg-[#50B1C9] text-white">WishList</button>
             </div>
           </div>

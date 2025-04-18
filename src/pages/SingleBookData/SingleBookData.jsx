@@ -18,8 +18,8 @@ const SingleBookData = ({ singleBookData }) => {
     } = singleBookData;
 
     return (
-        <div className="flex flex-col lg:flex-row border border-[#13131326] rounded-2xl mt-4 p-5 gap-5 max-w-6xl mx-auto">
-            {/* Book Image */}
+        <div className="flex flex-col lg:flex-row border border-[#13131326] rounded-2xl mt-4 p-5 gap-5 max-w-6xl mx-auto lg:mb-20">
+            
             <div className="flex justify-center items-center">
                 <img
                     className="w-full max-w-[200px] h-auto lg:h-[220px] rounded-xl p-4 bg-[#1313130D]"
