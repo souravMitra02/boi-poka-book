@@ -17,23 +17,23 @@ import PageToRead from '../pages/PageToRead/PageToRead';
          children: [
              {
              index: true,
-               loader: ()=>fetch('../../public/data/booksData.json'),
+               loader: ()=>fetch('/data/booksData.json'),
                  path: "/",
                  Component: Home
            },
            {
              path: '/read',
-             loader:()=> fetch('../../public/data/booksData.json'),
+             loader:()=> fetch('/data/booksData.json'),
              Component: PageToRead
            },
            {
              path: 'readList',
-             loader: ()=>fetch('../../public/data/booksData.json'),
+             loader: ()=>fetch('/data/booksData.json'),
              Component: ReadList
            },
            {
              path: '/bookDetails/:id',
-             loader: ()=>fetch('../../public/data/booksData.json'),
+             loader: ()=>fetch('/data/booksData.json'),
              Component: BookDetails
            }
       ]
